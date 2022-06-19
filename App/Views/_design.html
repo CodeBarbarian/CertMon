@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Metamorphosis">
+    <meta name="author" content="Morten Haugstad, Codebarbarian, morten.haugstad@gmail.com">
+
+    <link rel="stylesheet" href="{{public_root}}/assets/style.css">
+</head>
+<body>
+    {% for message in flash_messages %}
+    <div class="alert alert-{{ message.type }}">
+        {{ message.body }}
+    </div>
+    {% endfor %}
+
+    {% block body %}{% endblock %}
+</body>
+</html>

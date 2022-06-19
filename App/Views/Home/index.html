@@ -1,0 +1,28 @@
+{% extends '_design.html' %}
+
+{% block title %}Metamorphosis PHP Framework{% endblock %}
+
+{% block body %}
+<h1>{{ translation.fields_header_title }}</h1>
+
+<h1>{{ plugin_output }}</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Subject</th>
+        <th>ValidFrom</th>
+        <th>ValidTo</th>
+    </tr>
+    {% for certs in data %}
+    <tr>
+        <td>{{certs.name}}</td>
+        <td>{{certs.subject}}</td>
+        <td>{{certs.validfrom}}</td>
+        <td>{{certs.validto}}</td>
+    </tr>
+    {% endfor%}
+</table>
+
+
+{% endblock %}
