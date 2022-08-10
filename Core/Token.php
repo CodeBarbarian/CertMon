@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Namespace App
+ * Namespace Core
  * */
 namespace Core;
 

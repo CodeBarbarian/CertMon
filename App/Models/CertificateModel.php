@@ -5,14 +5,15 @@ namespace App\Models;
 use App\Config\Paths;
 use Core\Model;
 
-class Certificate extends Model {
-	/**
-	 * getCertificateFilename. Responsible for checking the directory for certificates,
-	 *
-	 * @return array
-	 */
+
+/**
+ * Home Model
+ *
+ * @version: PHP: 8.1
+ */
+class CertificateModel extends Model {
 	public static function getCertificateFilename() : array {
-		$Path = Paths::CERTIFICATE_DIR;
+		$Path = Paths::CERTIFICATE_DIR .'/';
 		return array_slice(scandir($Path), 2);
 	}
 
@@ -27,9 +28,25 @@ class Certificate extends Model {
 			$ValidFrom = date('d-m-Y H:i:s', $Data['validFrom_time_t']);
 			$ValidTo = date('d-m-Y H:i:s', $Data['validTo_time_t']);
 
-			$StructuredArray[] = array("name" => $Data['name'], "subject" => $Data['subject']['CN'], "validfrom" => $ValidFrom , "validto" => $ValidTo);
+			$StructuredArray[] = array(
+				"name" => $Data['name'],
+				"subject" => $Data['subject']['CN'],
+				"validfrom" => $ValidFrom ,
+				"validto" => $ValidTo);
 		}
 
 		return $StructuredArray;
+	}
+
+	public static function getCertificate(string $CertificateIdentifier) {
+
+	}
+
+	public static function addCertificate($Data) {
+
+	}
+
+	public static function removeCertificate(int $CertID) {
+
 	}
 }

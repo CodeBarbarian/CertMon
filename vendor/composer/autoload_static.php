@@ -36,7 +36,6 @@ class ComposerStaticInit7c0baa335460178fecca298af007aa1c
         'P' => 
         array (
             'Psr\\Http\\Message\\' => 17,
-            'Plugin\\' => 7,
         ),
         'H' => 
         array (
@@ -90,10 +89,6 @@ class ComposerStaticInit7c0baa335460178fecca298af007aa1c
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
-        ),
-        'Plugin\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/Plugin',
         ),
         'Http\\Promise\\' => 
         array (

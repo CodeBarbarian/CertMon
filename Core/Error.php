@@ -7,6 +7,7 @@
 namespace Core;
 
 use ErrorException;
+use App\Config\Paths;
 
 /**
  * Error and exception handler
@@ -40,7 +41,7 @@ class Error {
 	 * @return void
 	 * @throws \Twig\Error\LoaderError
 	 * @throws \Twig\Error\RuntimeError
-	 * @throws \Twig\Error\SyntaxError
+	 * @throws \Twig\Error\SyntaxError|\ReflectionException
 	 */
 	public static function exceptionHandler($Exception): void {
 		// Code is 404 (not found) or 500 (general error)
@@ -60,7 +61,7 @@ class Error {
 			echo "<p>Stack trace:<pre>" . $Exception->getTraceAsString() . "</pre></p>";
 			echo "<p>Thrown in '" . $Exception->getFile() . "' on line " . $Exception->getLine() . "</p>";
 		} else {
-			$log = dirname(__DIR__) . '/logs/' . date('Y-m-d') . '.txt';
+			$log = dirname(__DIR__) . '/'.Paths::SYSTEM_LOGS.'/' . date('Y-m-d') . '_php.txt';
 			ini_set('error_log', $log);
 
 			$Message = "Uncaught exception: '" . get_class($Exception) . "'";
@@ -69,7 +70,6 @@ class Error {
 			$Message .= "\nThrown in '" . $Exception->getFile() . "' on line " . $Exception->getLine();
 
 			error_log($Message);
-
 			View::renderTemplate("$Code.html");
 		}
 	}

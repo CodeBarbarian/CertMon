@@ -6,7 +6,7 @@ namespace App\Config;
  * Localization config
  * @version: PHP: 8.1
  *
- * @Localization
+ * @Language
  */
 class Language extends \Core\Config {
 	/**
@@ -14,10 +14,16 @@ class Language extends \Core\Config {
 	 * @var bool
 	 */
 	const USE_TRANSLATIONS = true;
+    
+    /**
+     * On/Off switch for using the default language when using translations
+     * @var bool
+     */
+    const USE_DEFAULT_LANGUAGE = false;
 
-	/**
-	 * Fallback language if for some reason it can't find anything matching in the web browser.
-	 * @var string
-	 */
-	const FALLBACK_LANGUAGE = "EN";
+    /**
+     * Direct replacement for FALLBACK_LANGUAGE
+     * @var string
+     */
+    const DEFAULT_HTTP_ACCEPT_LANGUAGE = "en";
 }

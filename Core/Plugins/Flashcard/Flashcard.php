@@ -58,16 +58,15 @@ class Flashcard extends Plugin {
 	/**
 	 * Get all the messages
 	 *
-	 * @return bool|null An array with all the messages or null if none set
+	 * @return array|bool An array with all the messages or null if none set
 	 */
-	public static function getMessages(): array|bool  {
+	public static function getMessages(): array|bool {
 		if (isset($_SESSION['flash_notifications'])) {
 			$Messages = $_SESSION['flash_notifications'];
 			unset($_SESSION['flash_notifications']);
 
 			return $Messages;
 		}
-
 		return false;
 	}
 }

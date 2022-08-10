@@ -2,7 +2,6 @@
 
 namespace Core\Plugins\HelloWorld;
 
-use Core\Plugins\iPlugin;
 use Core\Plugins\Plugin;
 
 /**

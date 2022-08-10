@@ -5,8 +5,7 @@ namespace App\Controllers;
 use Core\Controller;
 use Core\View;
 
-use App\Models\HomeModel;
-use App\Models\Certificate;
+use App\Models\CertificateModel;
 
 /**
  * Home controller
@@ -24,7 +23,11 @@ class Home extends Controller {
 	 * @throws \Twig\Error\SyntaxError|\ReflectionException
 	 */
     public function indexAction(): void {
-        var_dump(openssl_x509_parse(file_get_contents('./certificates/vg.cer')));
-		//View::renderTemplate('Home/index.html', Args: [ 'data' => Certificate::getCertificates()]);
+        //var_dump(openssl_x509_parse(file_get_contents('./certificates/test.cer')));
+		// var_dump(hash('sha256','./certificates/test.cer'));
+
+		$Certificates = CertificateModel::getCertificates();
+
+		View::renderTemplate('Home/index.html', ['certificates' => $Certificates]);
     }
 }

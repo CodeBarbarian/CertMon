@@ -19,8 +19,72 @@ class Paths extends Config {
 	public static function SITE_ROOT() : string {
 		return ((Site::SECURE_SERVER_COMMUNICATION) ? "https://" : "http://") . $_SERVER['HTTP_HOST'];
 	}
+    
+    /**
+     * Core directory
+     * @var string
+     */
+	const CORE_DIR = 'Core';
 
-	const PLUGINS = '../';
+	/**
+	 * System directory
+     * @var string
+	 */
+	const SYSTEM_DIR = self::CORE_DIR . '/System';
+    
+    /**
+     * Log directory
+     * @var string
+     */
+    const SYSTEM_LOGS = 'logs';
+    
+    /**
+     * Localization Directory
+     * @var string
+     */
+    const LOCALIZATION_DIR = self::CORE_DIR . '/Localization';
 
-	const CERTIFICATE_DIR = './certificates';
+	/**
+	 * Plugin directory
+	 * @var string
+	 */
+    const PLUGIN_DIR = self::CORE_DIR . '/Plugins';
+    
+    /**
+     * Language directory
+     * @var string
+     */
+    const LANGUAGE_DIR = self::LOCALIZATION_DIR . '/Languages';
+
+	/**
+	 * Application directory
+	 * @var string
+	 */
+    const APPLICATION_DIR = 'App';
+
+	/**
+	 * Policy directory
+	 * @var string
+	 */
+    const POLICY_DIR = self::CORE_DIR . '/Policies';
+
+	/**
+	 * Controller directory
+	 * @var string
+	 */
+    const CONTROLLER_DIR = self::APPLICATION_DIR . '/Controllers';
+
+	/**
+	 * Model directory
+	 * @var string
+	 */
+    const MODEL_DIR = self::APPLICATION_DIR . '/Models';
+
+	/**
+	 * Views directory
+	 * @var string
+	 */
+	const VIEW_DIR = self::APPLICATION_DIR . '/Views';
+
+	const CERTIFICATE_DIR = "certificates";
 }

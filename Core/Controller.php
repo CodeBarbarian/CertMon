@@ -5,7 +5,7 @@ namespace Core;
 use Exception;
 use App\Config\Site;
 
-use Core\Policies\Firewall\Firewall;
+use Core\Policies\Firewall\FirewallEngine;
 
 /**
  * Base controller
@@ -49,7 +49,7 @@ abstract class Controller {
 
 		if (method_exists($this, $Method)) {
 			// Add the firewall engine
-			Firewall::enforceCompliance();
+			FirewallEngine::enforceCompliance();
 
 			if ($this->before() !== false) {
 				call_user_func_array([$this, $Method], $Args);

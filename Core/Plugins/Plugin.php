@@ -1,7 +1,6 @@
 <?php
 
 namespace Core\Plugins;
-
 /**
  * Plugin Base
  * @version: PHP: 8.1

@@ -15,7 +15,7 @@ class Database extends Config {
 	/**
 	 * Is database turned on
 	 */
-	const USE_DATABASE = false;
+	const USE_DATABASE = true;
 
 	/**
 	 * Database Driver
@@ -33,17 +33,17 @@ class Database extends Config {
      * Database name
      * @var string
      */
-    const DB_NAME = 'metamorphosis';
+    const DB_NAME = 'certmon';
     
     /**
      * Database user
      * @var string
      */
-    const DB_USER = 'metamorphosis';
+    const DB_USER = 'certmon';
     
     /**
      * Database password
      * @var string
      */
-    const DB_PASSWORD = 'metamorphosis';
+    const DB_PASSWORD = 'certmon';
 }

@@ -3,6 +3,7 @@
 namespace Core\Policies\Account\Username;
 
 use Core\Policies\iPolicy;
+use Core\Policies\Policy;
 
 /**
  * Username Policy
@@ -10,7 +11,7 @@ use Core\Policies\iPolicy;
  *
  * @UsernamePolicy
  */
-class UsernamePolicy implements iPolicy {
+class UsernamePolicy extends Policy implements iPolicy {
 	/**
 	 * Minimum Username Length
 	 * @var int

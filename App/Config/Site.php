@@ -16,4 +16,14 @@ class Site extends Config {
 	 * @var boolean
      * */
     const SECURE_SERVER_COMMUNICATION = false;
+    
+    /**
+     * System Environment
+     * Values supported:
+     *      - development
+     *      - production
+     *
+     * @var string
+     */
+    const SYSTEM_ENVIRONMENT = 'development';
 }
