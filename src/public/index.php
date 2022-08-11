@@ -30,7 +30,8 @@ $Router->add('{controller}/{action}');
  * Add the routes for the Home Controller and the index action
  * */
 $Router->add('', ['controller' => 'Home', 'action' => 'index']);
-$Router->add('home', ['controller' => 'Home', 'action' => 'index']);
+$Router->add('certificate/detail/list', ['controller' => 'Certificate', 'action' => 'view']);
+
 /**
  * Execute the dispatch to allow navigation and use the QUERY_STRING for pathing
  * */

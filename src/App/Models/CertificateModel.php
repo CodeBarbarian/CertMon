@@ -16,7 +16,11 @@ class CertificateModel extends Model {
 		$Path = Paths::CERTIFICATE_DIR .'/';
 		return array_slice(scandir($Path), 2);
 	}
-
+    
+    /**
+     * Functional test presentation. Not production ready
+     * @return array
+     */
 	public static function getCertificates(): array {
 		$CertificateCount = count(static::getCertificateFilename());
 
@@ -39,11 +43,11 @@ class CertificateModel extends Model {
 	}
 
 	public static function getCertificate(string $CertificateIdentifier) {
-
+ 
 	}
 
 	public static function addCertificate($Data) {
-
+ 
 	}
 
 	public static function removeCertificate(int $CertID) {

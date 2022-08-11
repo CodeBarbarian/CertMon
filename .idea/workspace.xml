@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e3176f24-c86f-4798-b2ec-33bcd7a21a41" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/App/Controllers/Certificate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/Models/FileModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/Views/Certificate/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/Views/Certificate/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/Views/Certificate/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/Views/Certificate/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/Views/Certificate/manage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/Views/_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/public/certificates/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/public/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Models/CertificateModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Models/CertificateModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Views/Home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/Home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Views/_design.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/_design.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Views/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/_navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/index.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/clue/stream-filter" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/php-http/guzzle6-adapter" />
+      <path value="$PROJECT_DIR$/vendor/php-http/httplug" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/vendor/php-http/promise" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/Twig/doc" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/Twig/ext" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/Twig/lib" />
+      <path value="$PROJECT_DIR$/vendor/Twig/test" />
+      <path value="$PROJECT_DIR$/vendor/Twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="2Av2YChEyImiqg8uQdxbA3803Wd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/morten.haugstad/Documents/CertMon/src/App/Views/Certificate",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\morten.haugstad\Documents\CertMon\src\App\Views\Certificate" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3176f24-c86f-4798-b2ec-33bcd7a21a41" name="Changes" comment="" />
+      <created>1655875785902</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655875785902</updated>
+      <workItem from="1655875787765" duration="3614000" />
+      <workItem from="1656323093148" duration="25000" />
+      <workItem from="1656331977659" duration="598000" />
+      <workItem from="1656570867872" duration="6000" />
+      <workItem from="1656675327988" duration="35000" />
+      <workItem from="1656918509510" duration="5000" />
+      <workItem from="1657005507320" duration="137000" />
+      <workItem from="1660211284587" duration="5573000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
