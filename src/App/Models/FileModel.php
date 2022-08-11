@@ -22,7 +22,7 @@ class FileModel extends Model {
 	 */
 	private static function validateFileSize(array $Data = []): bool {
 		// Validate Size
-		return !($Data['file']['size'] > self::maxFileSize);
+		return !($Data['file']['size'] > static::maxFileSize);
 	}
 
 	/**
