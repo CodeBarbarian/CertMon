@@ -15,22 +15,26 @@
                 <thead>
                 <tr>
                     <th>Servername</th>
-                    <th>Certificate</th>
+                    <th>Issuer</th>
                     <th>Issued</th>
                     <th>Expiration</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
-                <tbody class="table-border-bottom-0">
+                <tbody class="table-border-bottom-10">
+                <tr>
+                    <td colspan="5"><hr /></td>
+                </tr>
                 {% for cert in certificates %}
                 <tr>
                     <td>
                         <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>{{ cert.name }}</strong>
                     </td>
-                    <td>{{ cert.subject }}</td>
+                    <td>{{ cert.issuer }}</td>
                     <td>{{ cert.validfrom }}</td>
                     <td><span class="badge bg-label-{{cert.code}} me-1">{{ cert.validto }} ({{cert.daysuntil}})</span>
                     </td>
+
                     <td>
                         <div class="dropdown">
                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">

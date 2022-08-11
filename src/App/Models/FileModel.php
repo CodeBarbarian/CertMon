@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Core\Model;
 use Core\Plugins\Flashcard\Flashcard;
-
+use App\Models\CertificateModel;
 /**
  * File Model Class
  * @version: PHP: 8.1
@@ -149,4 +149,38 @@ class FileModel extends Model {
 
         return true;
     }
+
+	/**
+	 * Remove a file (Certificate)
+	 *
+	 * @param array $Data
+	 * @return bool
+	 */
+	public static function removeFile(array $Data = []): bool {
+		$Flashcard = new Flashcard();
+
+		if (isset($Data['cancel'])) {
+			$Flashcard::addMessage("The DELETE operations has been canceled!", "warning");
+			return false;
+		}
+
+		// Do we actually get a filename?
+		if (!$Data['filename']) {
+			$Flashcard::addMessage("Filename not present!", "danger");
+			return false;
+		}
+
+		if (!in_array($Data['filename'].'.cer', CertificateModel::getCertificateFiles())) {
+			$Flashcard::addMessage("File does not exists!", "danger");
+			return false;
+		}
+
+		if (!unlink('./certificates/'.$Data['filename'].'.cer')) {
+			$Flashcard::addMessage("Unable to delete file!", "danger");
+			return false;
+		}
+
+		$Flashcard::addMessage("Successfully deleted certificate: ".$Data['filename'], "info");
+		return true;
+	}
 }

@@ -4,11 +4,11 @@
 
 {% block body %}
 <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Certificates /</span> Overview</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Certificates /</span> Detail</h4>
 
     <!-- Basic Bootstrap Table -->
     <div class="card">
-        <h5 class="card-header">Certificates</h5>
+        <h5 class="card-header">Certificate Details : {{ name }}</h5>
         <div class="table-responsive text-nowrap">
             <table class="table">
                 <thead>
@@ -17,12 +17,70 @@
                     <th>Value</th>
                 </tr>
                 </thead>
-                <tbody class="table-border-bottom-0">
-                {% for key,value in options %}
+                <tbody class="table-border-bottom-10">
                 <tr>
-                    <td>{{ key }}</td>
+                    <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>Name</strong></td>
+                    <td>{{ name }}</td>
                 </tr>
-                {% endfor %}
+
+                <tr>
+                    <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>Subject</strong></td>
+                    <td>{{ subject }}</td>
+                </tr>
+                <tr>
+                    <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>Hash</strong></td>
+                    <td>{{ hash }}</td>
+                </tr>
+                <tr>
+                    <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>Issuer</strong></td>
+                    <td>{{ issuer }}</td>
+                </tr>
+                <tr>
+                    <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>serialNumber</strong></td>
+                    <td>{{ serialNumber }}</td>
+                </tr>
+                <tr>
+                    <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>serialNumberHex</strong></td>
+                    <td>{{ serialNumberHex }}</td>
+                </tr>
+                <tr>
+                    <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>validFrom</strong></td>
+                    <td>{{ validFrom }}</td>
+                </tr>
+                <tr>
+                    <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>validTo</strong></td>
+                    <td>{{ validTo }}</td>
+                </tr>
+                <tr>
+                    <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>validFrom_time_t</strong></td>
+                    <td>{{ validFrom_time_t }}</td>
+                </tr>
+                <tr>
+                    <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>validTo_time_t</strong></td>
+                    <td>{{ validTo_time_t }}</td>
+                </tr>
+                <tr>
+                    <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>signatureTypeSN</strong></td>
+                    <td>{{ signatureTypeSN }}</td>
+                </tr>
+                <tr>
+                    <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>signatureTypeLN</strong></td>
+                    <td>{{ signatureTypeLN }}</td>
+                </tr>
+                <tr>
+                    <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>signatureTypeNID</strong></td>
+                    <td>{{ signatureTypeNID }}</td>
+                </tr>
+
+                <tr>
+                    <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>purposes</strong></td>
+                    <td>{{ purposes }}</td>
+                </tr>
+
+                <tr>
+                    <td><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>extensions</strong></td>
+                    <td>{{ extensions }}</td>
+                </tr>
                 </tbody>
             </table>
         </div>

@@ -15,31 +15,18 @@ use App\Models\FileModel;
  * @Home
  */
 class Certificate extends Controller {
-    /**
-     * Show the list certificates page
-     *
-     * @return void
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError|\ReflectionException
-     */
+	/**
+	 * Show the list certificates page
+	 *
+	 * @return void
+	 * @throws \Twig\Error\LoaderError
+	 * @throws \Twig\Error\RuntimeError
+	 * @throws \Twig\Error\SyntaxError|\ReflectionException
+	 * @throws \Exception
+	 */
     public function listAction(): void {
-        //var_dump(openssl_x509_parse(file_get_contents('./certificates/test1.cer')));
-        // var_dump(hash('sha256','./certificates/test.cer'));
-        $Certificates = CertificateModel::getCertificates();
+        $Certificates = CertificateModel::renderCertificateArray();
         View::renderTemplate('Certificate/list.html', ['certificates' => $Certificates]);
-    }
-    
-    /**
-     * Show the manage page
-     *
-     * @throws \Twig\Error\SyntaxError
-     * @throws \ReflectionException
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\LoaderError
-     */
-    public function manageAction(): void {
-        View::renderTemplate('Certificate/manage.html');
     }
     
     /**
@@ -70,14 +57,12 @@ class Certificate extends Controller {
     }
     
     /**
+	 * Delete a specified certificate
+	 *
      * @return void
-     * @throws \ReflectionException
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
      */
     public function deleteAction(): void {
-        CertificateModel::removeCertificate($_POST);
+        FileModel::removeFile($_POST);
         $this->redirect('/certificate/list');
     }
     
@@ -88,19 +73,32 @@ class Certificate extends Controller {
      * @throws \Twig\Error\LoaderError
      */
     public function viewAction(): void {
-        $Certificate = CertificateModel::getCertificate($this->route_params['name']);
-        $Data = array();
-        foreach ($Certificate as $Key => $Value) {
-            $Data[$Key] = $Value;
-        }
-        
-        View::renderTemplate('Certificate/detail.html', ['options' => $Data]);
+		$Argument = $this->route_params['name'];
+
+		$CertificateName = CertificateModel::getCertificateName($Argument);
+
+        View::renderTemplate('Certificate/detail.html', [
+			'name' => CertificateModel::getCertificateProperty($Argument, "name"),
+			'subject' => CertificateModel::getCertificateProperty($Argument, "subject"),
+			'hash' => CertificateModel::getCertificateProperty($Argument, "hash"),
+			'issuer' => CertificateModel::getCertificateProperty($Argument, "issuer"),
+			'serialNumber' => CertificateModel::getCertificateProperty($Argument, "serialNumber"),
+			'serialNumberHex' => CertificateModel::getCertificateProperty($Argument, "serialNumberHex"),
+			'validFrom' => CertificateModel::getCertificateProperty($Argument, "validFrom"),
+			'validTo' => CertificateModel::getCertificateProperty($Argument, "validTo"),
+			'validFrom_time_t' => CertificateModel::getCertificateProperty($Argument, "validTo_time_t"),
+			'validTo_time_t' => CertificateModel::getCertificateProperty($Argument, "validTo_time_t"),
+			'signatureTypeNID' => CertificateModel::getCertificateProperty($Argument, "signatureTypeNID"),
+			'signatureTypeSN' => CertificateModel::getCertificateProperty($Argument, "signatureTypeSN"),
+			'signatureTypeLN' => CertificateModel::getCertificateProperty($Argument, "signatureTypeLN"),
+			'purposes' => CertificateModel::getCertificateProperty($Argument, "purposes"),
+			'extensions' => CertificateModel::getCertificateProperty($Argument, "extensions")
+		]);
     }
     
     public function uploadAction(): void {
         $UploadAction = FileModel::uploadFile($_FILES);
 
-        /** @var TYPE_NAME $UploadAction */
         if (!$UploadAction) {
             $this->redirect('/certificate/add');
         } else {

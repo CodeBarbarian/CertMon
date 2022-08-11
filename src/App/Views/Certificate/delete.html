@@ -5,19 +5,28 @@
 {% block body %}
 <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Certificates /</span> Delete</h4>
-
-    <!-- Basic Bootstrap Table -->
-    <div class="card">
-        <h5 class="card-header">Delete Certificate</h5>
-        <p></p>
-        <form method="post" action="/certificate/delete">
-            <p><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> Are you sure you wish to delete the certificate for <strong>{{ certificate_name }}</strong>?</p>
-            <p><i class="fab fa-bootstrap fa-lg text-primary me-3"></i>with hash {{ filename }}?</p>
-
-            <input type="hidden" name="filename" value="{{ filename }}">
-            <input type="submit" name="delete" class="btn btn-danger" id="delete" value="Delete"/>
-            <input type="submit" name="delete" class="btn btn-warning" value="Cancel"/>
-        </form>
+    <div class="row">
+        <!-- Button with Badges -->
+        <div class="col-lg">
+            <div class="card mb-4">
+                <h5 class="card-header">Delete Certificate</h5>
+                <div class="card-body">
+                    <div class="row gy-3">
+                        <div class="col-sm-12">
+                            <form action="/certificate/delete" method="post">
+                                <small class="text-light fw-semibold">Are you sure you wish to delete the certificate
+                                    for <strong>{{ certificate_name }}</strong>?</small> Filehash: ({{filename}})
+                                <div class="demo-inline-spacing">
+                                    <input name="filename" type="hidden" value="{{ filename }}">
+                                    <input class="btn btn-primary" name="delete" type="submit" value="Yes"/>
+                                    <input class="btn btn-primary" name="cancel" type="submit" value="No"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
+</div>
 {% endblock %}

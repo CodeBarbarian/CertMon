@@ -6,10 +6,11 @@ Author: Morten Haugstad
 Version: 1.0
 Description: Certificate Monitoring tool
 
+Note: Version 1.0 does not have email support.
+
 ==========================
 Changelog:
 ==========================
-
 ___________
 11.08.2022:
     Added:
@@ -18,3 +19,4 @@ ___________
         * The ability to add Certificates
         * The ability to remove certificates
         * The ability to view certificates
+        * All the initial logic.
