@@ -3,5 +3,29 @@
 {% block title %}Add Certificates{% endblock %}
 
 {% block body %}
+<div class="row">
+
+    <div class="col-12">
+        <div class="card">
+            <h5 class="card-header">Add Certificate (Upload)</h5>
+            <div class="card-body demo-vertical-spacing demo-only-element">
+                <form method="post" action="/certificate/upload" enctype="multipart/form-data">
+                <div class="input-group">
+                    <input
+                            type="file"
+                            name="file"
+                            class="form-control"
+                            id="inputGroupFile04"
+                            aria-describedby="inputGroupFileAddon04"
+                            aria-label="Upload"
+                    />
+                    <input type="submit" class="btn btn-outline-primary" type="button" id="inputGroupFileAddon04" />
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 
 {% endblock %}

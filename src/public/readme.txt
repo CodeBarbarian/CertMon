@@ -4,7 +4,7 @@
 
 Author: Morten Haugstad
 Version: 1.0
-Description: Certificate Monitoring tool for your everyday certificates
+Description: Certificate Monitoring tool
 
 ==========================
 Changelog:
@@ -15,4 +15,6 @@ ___________
     Added:
         * New directory structure
         * Helper Legend, and initial landing page for ease of use
-        *
+        * The ability to add Certificates
+        * The ability to remove certificates
+        * The ability to view certificates

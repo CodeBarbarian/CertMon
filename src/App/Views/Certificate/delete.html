@@ -3,5 +3,21 @@
 {% block title %}Delete Certificates{% endblock %}
 
 {% block body %}
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Certificates /</span> Delete</h4>
+
+    <!-- Basic Bootstrap Table -->
+    <div class="card">
+        <h5 class="card-header">Delete Certificate</h5>
+        <p></p>
+        <form method="post" action="/certificate/delete">
+            <p><i class="fab fa-bootstrap fa-lg text-primary me-3"></i> Are you sure you wish to delete the certificate for <strong>{{ certificate_name }}</strong>?</p>
+            <p><i class="fab fa-bootstrap fa-lg text-primary me-3"></i>with hash {{ filename }}?</p>
+
+            <input type="hidden" name="filename" value="{{ filename }}">
+            <input type="submit" name="delete" class="btn btn-danger" id="delete" value="Delete"/>
+            <input type="submit" name="delete" class="btn btn-warning" value="Cancel"/>
+        </form>
+    </div>
 
 {% endblock %}

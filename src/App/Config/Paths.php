@@ -85,6 +85,10 @@ class Paths extends Config {
 	 * @var string
 	 */
 	const VIEW_DIR = self::APPLICATION_DIR . '/Views';
-
+    
+    /**
+     * Certificate directory
+     * @var string
+     */
 	const CERTIFICATE_DIR = "certificates";
 }

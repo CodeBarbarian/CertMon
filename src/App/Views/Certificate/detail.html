@@ -3,5 +3,29 @@
 {% block title %}Certificate Monitor{% endblock %}
 
 {% block body %}
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Certificates /</span> Overview</h4>
 
+    <!-- Basic Bootstrap Table -->
+    <div class="card">
+        <h5 class="card-header">Certificates</h5>
+        <div class="table-responsive text-nowrap">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Key</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody class="table-border-bottom-0">
+                {% for key,value in options %}
+                <tr>
+                    <td>{{ key }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 {% endblock %}

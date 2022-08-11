@@ -2,23 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3176f24-c86f-4798-b2ec-33bcd7a21a41" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App/Controllers/Certificate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/Models/FileModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/Views/Certificate/add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/Views/Certificate/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/Views/Certificate/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/Views/Certificate/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/Views/Certificate/manage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/Views/_menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/certificates/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/readme.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/Home.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/Config/Files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Config/Paths.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Config/Paths.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Controllers/Certificate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/Certificate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Models/CertificateModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Models/CertificateModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Views/Home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/Home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Models/FileModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Models/FileModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Views/Certificate/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/Certificate/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Views/Certificate/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/Certificate/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Views/Certificate/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/Certificate/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Views/Certificate/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/Certificate/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/Views/_design.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/_design.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Views/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/_navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/certificates/test.cer" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/readme.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +85,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\morten.haugstad\Documents\CertMon\src\App\Views\Certificate" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\morten.haugstad\Documents\CertMon\src\public\certificates" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -104,7 +104,7 @@
       <workItem from="1656675327988" duration="35000" />
       <workItem from="1656918509510" duration="5000" />
       <workItem from="1657005507320" duration="137000" />
-      <workItem from="1660211284587" duration="5573000" />
+      <workItem from="1660211284587" duration="21300000" />
     </task>
     <servers />
   </component>

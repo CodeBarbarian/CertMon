@@ -30,7 +30,11 @@ $Router->add('{controller}/{action}');
  * Add the routes for the Home Controller and the index action
  * */
 $Router->add('', ['controller' => 'Home', 'action' => 'index']);
-$Router->add('certificate/detail/list', ['controller' => 'Certificate', 'action' => 'view']);
+
+$Router->add('certificate/delete/{name:[\wa-f]+}', ['controller' => 'Certificate', 'action' => 'delete']);
+$Router->add('certificate/delete/confirm/{name:[\wa-f]+}', ['controller' => 'Certificate', 'action' => 'confirm']);
+$Router->add('certificate/detail/{name:[\wa-f]+}', ['controller' => 'Certificate', 'action' => 'view']);
+
 
 /**
  * Execute the dispatch to allow navigation and use the QUERY_STRING for pathing

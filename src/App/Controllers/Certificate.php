@@ -6,6 +6,7 @@ use Core\Controller;
 use Core\View;
 
 use App\Models\CertificateModel;
+use App\Models\FileModel;
 
 /**
  * Home controller
@@ -23,11 +24,9 @@ class Certificate extends Controller {
      * @throws \Twig\Error\SyntaxError|\ReflectionException
      */
     public function listAction(): void {
-        //var_dump(openssl_x509_parse(file_get_contents('./certificates/test.cer')));
+        //var_dump(openssl_x509_parse(file_get_contents('./certificates/test1.cer')));
         // var_dump(hash('sha256','./certificates/test.cer'));
-        
         $Certificates = CertificateModel::getCertificates();
-        
         View::renderTemplate('Certificate/list.html', ['certificates' => $Certificates]);
     }
     
@@ -61,8 +60,26 @@ class Certificate extends Controller {
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
+    public function confirmAction(): void {
+        $CertificateName = CertificateModel::getCertificateName($this->route_params['name']);
+        
+        View::renderTemplate('Certificate/delete.html', [
+            'certificate_name' => $CertificateName,
+            'filename' => $this->route_params['name']
+        ]);
+    }
+    
+    /**
+     * @return void
+     * @throws \ReflectionException
+     * @throws \Twig\Error\LoaderError
+     * @throws \Twig\Error\RuntimeError
+     * @throws \Twig\Error\SyntaxError
+     */
     public function deleteAction(): void {
-        View::renderTemplate('Certificate/delete.html');
+        $DeleteAction = CertificateModel::removeCertificate($_POST);
+        $this->redirect('/certificate/list');
+        
     }
     
     /**
@@ -72,6 +89,23 @@ class Certificate extends Controller {
      * @throws \Twig\Error\LoaderError
      */
     public function viewAction(): void {
-        View::renderTemplate('Certificate/detail.html');
+        $Certificate = CertificateModel::getCertificate($this->route_params['name']);
+        $Data = array();
+        foreach ($Certificate as $Key => $Value) {
+            $Data[$Key] = $Value;
+        }
+        
+        View::renderTemplate('Certificate/detail.html', ['options' => $Data]);
+    }
+    
+    public function uploadAction(): void {
+        $UploadAction = FileModel::uploadFile($_FILES);
+
+        /** @var TYPE_NAME $UploadAction */
+        if (!$UploadAction) {
+            $this->redirect('/certificate/add');
+        } else {
+            $this->redirect('/certificate/list');
+        }
     }
 }
