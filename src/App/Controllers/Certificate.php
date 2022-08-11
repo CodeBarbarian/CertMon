@@ -77,9 +77,8 @@ class Certificate extends Controller {
      * @throws \Twig\Error\SyntaxError
      */
     public function deleteAction(): void {
-        $DeleteAction = CertificateModel::removeCertificate($_POST);
+        CertificateModel::removeCertificate($_POST);
         $this->redirect('/certificate/list');
-        
     }
     
     /**
