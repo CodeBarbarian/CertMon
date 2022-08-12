@@ -21,4 +21,18 @@ class System {
         }
         return false;
     }
+    
+    public static function getCertMonVersion(): string|bool {
+        $Filename = '../'.Paths::SYSTEM_DIR.'/certmon.txt';
+    
+        if (file_exists($Filename) && is_readable($Filename)) {
+            $File = fopen($Filename, 'r');
+            $Version = fgets($File);
+            fclose($File);
+        
+            // Hacky to get a float to be able to check if correctly
+            return (floatval($Version) ? $Version : false);
+        }
+        return false;
+    }
 }

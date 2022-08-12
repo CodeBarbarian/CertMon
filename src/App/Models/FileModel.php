@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Core\Model;
 use Core\Plugins\Flashcard\Flashcard;
-use App\Models\CertificateModel;
+
 /**
  * File Model Class
  * @version: PHP: 8.1

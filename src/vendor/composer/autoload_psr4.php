@@ -13,6 +13,7 @@ return array(
     'Symfony\\Polyfill\\Intl\\Idn\\' => array($vendorDir . '/symfony/polyfill-intl-idn'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
+    'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
     'Http\\Promise\\' => array($vendorDir . '/php-http/promise/src'),
     'Http\\Message\\' => array($vendorDir . '/php-http/message/src', $vendorDir . '/php-http/message-factory/src'),
     'Http\\Client\\' => array($vendorDir . '/php-http/httplug/src'),

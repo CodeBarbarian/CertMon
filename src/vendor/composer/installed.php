@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '1db9e84d4a67c48664506e73f359999a373372cd',
+        'reference' => '0281657764f98d201ccec11bda8d6e101bacc628',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '1db9e84d4a67c48664506e73f359999a373372cd',
+            'reference' => '0281657764f98d201ccec11bda8d6e101bacc628',
             'dev_requirement' => false,
         ),
         'clue/stream-filter' => array(
@@ -116,6 +116,15 @@
             'install_path' => __DIR__ . '/../php-http/promise',
             'aliases' => array(),
             'reference' => '4c4c1f9b7289a2ec57cde7f1e9762a5789506f88',
+            'dev_requirement' => false,
+        ),
+        'phpmailer/phpmailer' => array(
+            'pretty_version' => 'v6.6.3',
+            'version' => '6.6.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpmailer/phpmailer',
+            'aliases' => array(),
+            'reference' => '9400f305a898f194caff5521f64e5dfa926626f3',
             'dev_requirement' => false,
         ),
         'psr/http-message' => array(

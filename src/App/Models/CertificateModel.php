@@ -5,7 +5,6 @@ namespace App\Models;
 use App\Config\Paths;
 use Core\Model;
 
-use Core\Plugins\Flashcard\Flashcard;
 /**
  * Home Model
  *
@@ -97,6 +96,10 @@ class CertificateModel extends Model {
 				"validfrom" => $ValidFrom ,
 				"validto" => $ValidTo
 			);
+            
+            // Added some sorting to make sure the ones who are expiring are moved to the top
+            $Sort = array_column($CertificateArray, 'sort');
+            array_multisort($Sort, SORT_ASC, $CertificateArray);
 		}
 		return $CertificateArray;
 	}
@@ -154,13 +157,13 @@ class CertificateModel extends Model {
 				$Output = $Data['name'];
 				break;
 			case 'subject':
-				$Output = implode($Data['subject']);
+				$Output = implode(", ",$Data['subject']);
 				break;
 			case 'hash':
 				$Output = $Data['hash'];
 				break;
 			case 'issuer':
-				$Output = implode(", ",$Data['issuer']);
+				$Output = $Data['issuer']['CN'];
 				break;
 			case 'version':
 				$Output = $Data['version'];
@@ -193,7 +196,6 @@ class CertificateModel extends Model {
 				$Output = $Data['signatureTypeNID'];
 				break;
 			case 'purposes':
-				//$Output = implode(", ", $Data['purposes']);
 				$Output = implode(", ", static::getCertificatePropertyPurpose($CertificateIdentifier));
 				break;
 			case 'extensions':

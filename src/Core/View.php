@@ -75,7 +75,10 @@ class View {
 			$Twig->addGlobal('public_root', Paths::SITE_ROOT());
 			$Twig->addGlobal('flash_messages', Flashcard::getMessages());
 			$Twig->addGlobal('translation', Localization::Translate());
+            
+            // Versioning
             $Twig->addGlobal('framework_version', System::getVersion());
+            $Twig->addGlobal('certmon_version', System::getCertMonVersion());
             
             /**
              * Testing twig integration for generating CSRF tokens

@@ -2,8 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3176f24-c86f-4798-b2ec-33bcd7a21a41" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/App/Controllers/Tasks.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/Helpers/Cron.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/Views/Tasks/email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/Plugins/Email/Email.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/Plugins/Email/EmailConfig.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Core/System/certmon.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Models/CertificateModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Models/CertificateModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Models/FileModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Models/FileModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Views/Home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/Home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Views/_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/_menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Plugins/AAA/AAA.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Plugins/AAA/Models/AccountingModel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Plugins/AAA/Models/AuthenticationModel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/Plugins/AAA/Models/AuthorizationModel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/System/System.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/System/System.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Core/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendor/composer/platform_check.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,16 +97,18 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/morten.haugstad/Documents/CertMon/src/App/Views/Certificate",
+    "last_opened_file_path": "C:/Users/morten.haugstad/Documents/CertMon/src/Core/System",
     "settings.editor.selected.configurable": "MTConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\morten.haugstad\Documents\CertMon\src\Core\System" />
       <recent name="C:\Users\morten.haugstad\Documents\CertMon\src\App\Views\Certificate" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\morten.haugstad\Documents\CertMon\src\public" />
       <recent name="C:\Users\morten.haugstad\Documents\CertMon\src\public\certificates" />
     </key>
   </component>
@@ -95,6 +129,7 @@
       <workItem from="1657005507320" duration="137000" />
       <workItem from="1660211284587" duration="21300000" />
       <workItem from="1660239591624" duration="12000000" />
+      <workItem from="1660283831121" duration="15252000" />
     </task>
     <servers />
   </component>
