@@ -40,11 +40,6 @@ $Router->add('certificate/delete/confirm/{name:[\wa-f]+}', ['controller' => 'Cer
 $Router->add('certificate/detail/{name:[\wa-f]+}', ['controller' => 'Certificate', 'action' => 'view']);
 
 /**
- * Cron tasks
- */
-$Router->add('tasks/run', ['controller' => 'Tasks', 'action' => 'run']);
-
-/**
  * Execute the dispatch to allow navigation and use the QUERY_STRING for pathing
  * */
 $Router->dispatch($_SERVER['QUERY_STRING']);

@@ -1,13 +1,4 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -73,7 +64,6 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -86,43 +76,103 @@ CertMon is your lightweight Certificate Monitoring tool. Built using the Metamor
 
 CertMon uses a file based approach instead of relying on a database, this makes managing certificates way easier.
 
+All the certificates will be stored in the certificate directory inside ````./src/public/certificates````.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 ### Built With
 
-* More information is on its way!
+* [PHP](https://www.php.net/)
+* [Metamorphosis PHP Framework](https://github.com/codebarbarian/metamorphosis)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-* More information is on its way!
+1. Clone this repository ```git clone https://github.com/CodeBarbarian/CertMon.git .```
+2. Install docker, docker-compose
+3. Do the required changes to the docker-compose file
+4. Run ```docker-compose up -d```
+5. You should now be up and running!?
 
 ### Prerequisites
 
-* More information is on its way!
+* Docker
+* docker-compose
+* git
 
 ### Installation
 
- * More information is on its way!
+1. Clone this repository ```git clone https://github.com/CodeBarbarian/CertMon.git .```
+2. Install docker, docker-compose
+3. Do the required changes to the docker-compose file
+4. Run ```docker-compose up -d```
+5. You should now be up and running!?
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-* More information is on its way!
+### Development
+````yaml
+version: '3.9'
+services:
+  certmon-server:
+    container_name: certmon-server
+    image: codebarbarian/certmon-server:latest
+    volumes:
+      - ./src:/var/www/html/
+    ports:
+      - 80:80
+  certmon-cron-dev:
+    container_name: certmon-cron-dev
+    image: codebarbarian/certmon-cron-dev:latest
+````
+
+### Every 12 Hours
+````yaml
+version: '3.9'
+services:
+  certmon-server:
+    container_name: certmon-server
+    image: codebarbarian/certmon-server:latest
+    volumes:
+      - ./src:/var/www/html/
+    ports:
+      - 80:80
+  certmon-cron-12:
+    container_name: certmon-cron-12
+    image: codebarbarian/certmon-cron-12:latest
+````
+
+### Every 24 Hours
+````yaml
+version: '3.9'
+services:
+  certmon-server:
+    container_name: certmon-server
+    image: codebarbarian/certmon-server:latest
+    volumes:
+      - ./src:/var/www/html/
+    ports:
+      - 80:80
+  certmon-cron-24:
+    container_name: certmon-cron-24
+    image: codebarbarian/certmon-cron-24:latest
+````
+
+### Making local changes to the individual Dockerfiles for local changes: 
+* Just make any change you feel like, build the images and point either the context (build) or publish your own version of the images to [Docker Hub](https://hub.docker.com/).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- ROADMAP -->
 ## Roadmap
-
-Currently the roadmap is a bit unclear. The first thing that needs doing is to get the base of the project of its feet then we can look into making this application run in docker for easier deployment. 
 
 See the [open issues](https://github.com/codebarbarian/CertMon/issues) for a full list of proposed features (and known issues).
 
@@ -165,19 +215,6 @@ Morten Haugstad - [@codebarbarian](https://twitter.com/codebarbarian)
 Project Link: [https://github.com/codebarbarian/CertMon](https://github.com/codebarbarian/CertMon)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

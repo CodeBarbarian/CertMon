@@ -13,7 +13,7 @@ class Language extends \Core\Config {
 	 * On/Off switch for using translations or not
 	 * @var bool
 	 */
-	const USE_TRANSLATIONS = true;
+	const USE_TRANSLATIONS = false;
     
     /**
      * On/Off switch for using the default language when using translations

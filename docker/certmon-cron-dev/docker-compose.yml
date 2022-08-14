@@ -1,0 +1,7 @@
+version: '3.9'
+services:
+  certmon-cron-dev:
+    container_name: certmon-cron-dev
+    build:
+      context: .
+      dockerfile: Dockerfile

@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  certmon-server:
+    container_name: certmon-server
+    image: codebarbarian/certmon-server:latest
+    volumes:
+      - ./src:/var/www/html/
+    ports:
+      - 80:80
+  certmon-cron-dev:
+    container_name: certmon-cron-dev
+    image: codebarbarian/certmon-cron-dev:latest
+    
