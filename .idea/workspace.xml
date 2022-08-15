@@ -2,32 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3176f24-c86f-4798-b2ec-33bcd7a21a41" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/certmon-cron-12/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/certmon-cron-12/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/certmon-cron-24/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/certmon-cron-24/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/certmon-cron-dev/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/certmon-cron-dev/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/certmon-server/000-default.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/certmon-server/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/certmon-server/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/certmon-server/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/certmon-server/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker/database/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker/nginx/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker/nginx/conf.d/default.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker/nginx/nginx.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker/nginx/sites/default.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker/php-fpm/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/src/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Config/Language.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Config/Language.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Controllers/Tasks.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controllers/Tasks.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Helpers/Cron.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Helpers/Cron.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Views/Certificate/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Views/Certificate/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/certmon-server/000-default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/docker/certmon-server/000-default.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/certmon-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/certmon-server/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +72,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Morten/Documents/CertMon/docker/certmon-cron-12",
+    "last_opened_file_path": "C:/Users/morten.haugstad/Documents/CertMon/docker/certmon-server",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "MTConfigurable",
     "vue.rearranger.settings.migration": "true"
@@ -101,11 +80,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\morten.haugstad\Documents\CertMon\docker\certmon-server" />
       <recent name="C:\Users\Morten\Documents\CertMon\docker\certmon-cron-12" />
       <recent name="C:\Users\Morten\Documents\CertMon\docker\certmon-cron-24" />
       <recent name="C:\Users\Morten\Documents\CertMon\docker\certmon-server" />
       <recent name="C:\Users\Morten\Documents\CertMon\src\docker\certmon-cron" />
-      <recent name="C:\Users\morten.haugstad\Documents\CertMon\src\Core\System" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Morten\Documents\CertMon" />
@@ -135,6 +114,7 @@
       <workItem from="1660283831121" duration="15252000" />
       <workItem from="1660324429139" duration="12232000" />
       <workItem from="1660479676934" duration="3740000" />
+      <workItem from="1660565604919" duration="1651000" />
     </task>
     <servers />
   </component>
