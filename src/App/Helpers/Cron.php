@@ -45,6 +45,7 @@ class Cron {
         ]);
         
         Email::send(\Core\Plugins\Email\EmailConfig::TO_ADDRESS, 'CertMon Report', $TEXT, $HTML);
+        $Flashcard::addMessage("Report has been sent successfully!");
         return true;
     }
 }

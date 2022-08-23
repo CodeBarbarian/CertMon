@@ -146,7 +146,14 @@ class CertificateModel extends Model {
 
 		return $StructuredArray;
 	}
-
+    
+    /**
+     * Helper method for getCertificateProperty
+     *
+     * @param $Data
+     *
+     * @return bool|string|void
+     */
     private static function getCertificatePropertySubject ($Data) {
         if (is_string($Data)) {
             return $Data;
@@ -156,7 +163,15 @@ class CertificateModel extends Model {
             return print_r($Data, true);
         }
     }
-
+    
+    /**
+     * method for retrieving certificate properties from certificate.
+     *
+     * @param string $CertificateIdentifier
+     * @param string $Property
+     *
+     * @return array|bool|mixed|string|void
+     */
 	public static function getCertificateProperty(string $CertificateIdentifier, string $Property) {
 		$Data = static::getCertificate($CertificateIdentifier);
 		$Output = [];

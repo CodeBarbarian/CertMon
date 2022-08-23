@@ -33,7 +33,7 @@ ___________
     Added:
         * Added temporary fix for the certificate subject in certificate model. Will probably redo most if not all of
           the certificate model when able.
-        *
+        * Added Flash-message for successfully sent report.
 
     Modified:
         * Email Plugin now uses the Config for most if not all its options.
