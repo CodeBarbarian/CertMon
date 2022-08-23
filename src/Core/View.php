@@ -79,26 +79,6 @@ class View {
             // Versioning
             $Twig->addGlobal('framework_version', System::getVersion());
             $Twig->addGlobal('certmon_version', System::getCertMonVersion());
-            
-            /**
-             * Testing twig integration for generating CSRF tokens
-             * No validation has been added yet. this is just a function test.
-             */
-            $Function = new \Twig\TwigFunction('csrf_token', callable: function(string $locked_to = null) {
-                    if (empty($_SESSION['token'])) {
-                        $_SESSION['token'] = bin2hex(random_bytes(32));
-                    }
-                    if (empty($_SESSION['token2'])) {
-                        $_SESSION['token2'] = random_bytes(32);
-                    }
-                    if (empty($locked_to)) {
-                        return $_SESSION['token'];
-                    }
-                    return hash_hmac('sha256', $locked_to, $_SESSION['token2']);
-                }
-            );
-            
-            $Twig->addFunction($Function);
         }
 
 		if (!empty($Template)) {

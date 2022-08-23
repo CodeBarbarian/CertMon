@@ -7,7 +7,7 @@ services:
       - ./src:/var/www/html/
     ports:
       - 80:80
-  certmon-cron-dev:
-    container_name: certmon-cron-dev
-    image: codebarbarian/certmon-cron-dev:latest
+#  certmon-cron-dev:
+#    container_name: certmon-cron-dev
+#    image: codebarbarian/certmon-cron-dev:latest
     

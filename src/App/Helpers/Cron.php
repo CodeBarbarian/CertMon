@@ -28,16 +28,6 @@ class Cron {
 			return false;
 		}
 
-		if (empty(\Core\Plugins\Email\EmailConfig::SMTP_USERNAME)) {
-			$Flashcard::addMessage("SMTP_USERNAME is not set!", "danger");
-			return false;
-		}
-
-		if (empty(\Core\Plugins\Email\EmailConfig::SMTP_PASSWORD)) {
-			$Flashcard::addMessage("SMTP_PASSWORD is not set!", "danger");
-			return false;
-		}
-
 		if (empty(\Core\Plugins\Email\EmailConfig::SMTP_NOREPLY)) {
 			$Flashcard::addMessage("SMTP_NOREPLY is not set!", "danger");
 			return false;
@@ -54,11 +44,7 @@ class Cron {
             'todays_date'  => date('d-m-Y H:i:s')
         ]);
         
-        if (!Email::send(\Core\Plugins\Email\EmailConfig::TO_ADDRESS, 'CertMon Report', $TEXT, $HTML)) {
-			$Flashcard::addMessage("Unable to send report!", 'danger');
-            return false;
-        }
-		Flashcard::addMessage("Report successfully sent!", 'success');
+        Email::send(\Core\Plugins\Email\EmailConfig::TO_ADDRESS, 'CertMon Report', $TEXT, $HTML);
         return true;
     }
 }

@@ -28,4 +28,12 @@ ___________
     Modified:
         * The CertificateModel after finding a bug which produces array to string conversion errors
 
-    Deleted:
+___________
+23.08.2022:
+    Added:
+        * Added temporary fix for the certificate subject in certificate model. Will probably redo most if not all of
+          the certificate model when able.
+        *
+
+    Modified:
+        * Email Plugin now uses the Config for most if not all its options.

@@ -32,8 +32,9 @@ class Email extends Plugin {
     
             $Mail->Host = EmailConfig::SMTP_HOST;
             $Mail->Port = EmailConfig::SMTP_PORT;
-    
-            $Mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            
+            $Mail->SMTPSecure = EmailConfig::SMTP_SECURE;
+            $Mail->SMTPAutoTLS = EmailConfig::SMTP_AUTO_TLS;
             
             $Mail->SMTPAuth = EmailConfig::USE_SMTP_AUTH;
             $Mail->Username = EmailConfig::SMTP_USERNAME;

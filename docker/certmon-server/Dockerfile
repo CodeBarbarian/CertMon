@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install -y \
     unzip
 
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
-
 RUN a2enmod rewrite
 
 # Get composer
@@ -22,7 +21,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Composer specific
 ENV COMPOSER_ALLOW_SUPERUSER 1
-
 RUN chown -R www-data:www-data /var/www/html
 
 #WORKDIR /var/www/html

@@ -2,6 +2,7 @@
 
 namespace Core\Plugins\Email;
 
+use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
 class EmailConfig {
@@ -19,6 +20,12 @@ class EmailConfig {
      * */
     const SMTP_DEBUG = SMTP::DEBUG_OFF;
     
+    /**
+     * Set the SMTP
+     */
+    const SMTP_SECURE = PHPMailer::ENCRYPTION_STARTTLS;
+    
+    const SMTP_AUTO_TLS = true;
     /**
      * Set the SMTP Host
      */

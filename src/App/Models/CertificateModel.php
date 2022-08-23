@@ -76,7 +76,7 @@ class CertificateModel extends Model {
 		for ($CurrentCert = 0; $CurrentCert < $CertificateFilesCount; $CurrentCert++) {
 			$Filename = Paths::CERTIFICATE_DIR.'/'.$CertificateFiles[$CurrentCert];
 			$Data = openssl_x509_parse(file_get_contents(($Filename)));
-
+   
 			// ValidFrom / ValidTo
 			$ValidFrom = date('d-m-Y H:i:s', $Data['validFrom_time_t']);
 			$ValidTo = date('d-m-Y H:i:s', $Data['validTo_time_t']);
@@ -147,6 +147,15 @@ class CertificateModel extends Model {
 		return $StructuredArray;
 	}
 
+    private static function getCertificatePropertySubject ($Data) {
+        if (is_string($Data)) {
+            return $Data;
+        }
+        
+        if (is_array($Data)) {
+            return print_r($Data, true);
+        }
+    }
 
 	public static function getCertificateProperty(string $CertificateIdentifier, string $Property) {
 		$Data = static::getCertificate($CertificateIdentifier);
@@ -157,7 +166,7 @@ class CertificateModel extends Model {
 				$Output = $Data['name'];
 				break;
 			case 'subject':
-				$Output = implode(", ",$Data['subject']);
+				$Output = static::getCertificatePropertySubject($Data['subject']);
 				break;
 			case 'hash':
 				$Output = $Data['hash'];

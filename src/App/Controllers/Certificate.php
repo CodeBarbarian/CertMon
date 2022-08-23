@@ -26,6 +26,7 @@ class Certificate extends Controller {
 	 */
     public function listAction(): void {
         $Certificates = CertificateModel::renderCertificateArray();
+        //var_dump(openssl_x509_parse(file_get_contents(('./certificates/8a1fa4f108f69b94220518ad9690980a9efa3d85897104f3a99a368ec579e7c7.cer'))));
         View::renderTemplate('Certificate/list.html', ['certificates' => $Certificates]);
     }
     
